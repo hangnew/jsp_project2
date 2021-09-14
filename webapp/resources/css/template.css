@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+#body {
+	background-image: url("../img/bgGrid.png");
+	background-repeat: repeat;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+#frame {
+	position: relative;
+	background-image: url("../img/bgFrame.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	top: 15px;
+	left: 15px;
+	width: 1220px;
+	height: 800px;
+}
+
+#mainMenu {
+	position: absolute;
+	right: 0;
+	top: 120px;
+	width: 90px;
+	text-align: center;
+	font-weight: 500;
+}
+
+.menuOn {
+	background-image: url("../img/menuOn.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 90px;
+	height: 50px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.menuOff {
+	background-image: url("../img/menuOff.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 90px;
+	height: 50px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+#mainLeft {
+	position: absolute;
+	border: 1px solid black;
+	top: 120px;
+	left: 75px;
+	width: 250px;
+	height: 600px;
+}
+
+#mainRight {
+	position: absolute;
+	top: 120px;
+	right: 100px;
+	border: 1px solid black;
+	width: 730px;
+	height: 600px;
+	overflow: auto;
+}

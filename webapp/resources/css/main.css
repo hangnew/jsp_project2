@@ -1,0 +1,443 @@
+@charset "UTF-8";
+
+button:hover {
+	cursor: pointer;
+}
+
+a {text-decoration: none;}
+
+#body {
+	background-image: url("../img/bgGrid.png");
+	background-repeat: repeat;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+#frame {
+	position: relative;
+	background-image: url("../img/bgFrame.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	top: 15px;
+	left: 15px;
+	width: 1220px;
+	height: 800px;
+}
+
+#mainMenu {
+	position: absolute;
+	right: 0;
+	top: 120px;
+	width: 90px;
+	text-align: center;
+	font-weight: 500;
+}
+
+.menuOn {
+	color: black;
+	background-image: url("../img/menuOn.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 90px;
+	height: 50px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.menuOn a {
+	display: block;
+	padding: 10px;
+	color: black;
+	text-decoration: none;
+}
+
+.menuOff {
+	background-image: url("../img/menuOff.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 90px;
+	height: 50px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.menuOff a {
+	display: block;
+	padding: 10px;
+	color: white;
+	text-decoration: none;
+}
+
+#visitCount {
+	position: absolute;
+	top: 70px;
+	left: 50px;
+	width: 300px;
+	color: grey;
+	text-align: center;
+	font-size: 15px;
+	font-weight: 400;
+}
+
+#mainTitle {
+	position: absolute;
+	top: 55px;
+	left: 380px;
+	font-size: 30px;
+	font-weight: 500;
+	width: 650px;
+	color: #1897B1;
+}
+
+#mainTitleEdit {
+	position: absolute;
+	top: 55px;
+	left: 380px;
+	width: 650px;
+}
+
+#mainTitleEdit input {
+	font-size: 30px;
+	font-weight: 500;
+	width: 100%;
+}
+
+#mainTitleBtnDiv {
+	position: absolute;
+	top: 65px;
+	left: 1030px;
+	width: 95px;
+	text-align: right;
+}
+
+#mTitleBtn1 {
+	width: 30px;
+	border: none;
+	font-size: 15pt;
+	color: #FF8B2D;
+	background: transparent;
+}
+
+#mTitleBtn2 {
+	width: 30px;
+	border: none;
+	font-size: 12pt;
+	color: grey;
+	background: transparent;
+}
+
+#mTitleBtn3 {
+	width: 45px;
+	border: 1px solid #babec0;
+	border-radius: 5px;
+	font-size: 12pt;
+	background: white;
+}
+
+#mainTop {
+	position: absolute;
+	top: 20px;
+	left: 1280px;
+	width: 230px;
+	background: white;
+}
+
+#bgmDiv {
+	border: 1px dotted grey;
+	width: 210px;
+	padding-top: 10px;
+	padding-left: 10px;
+	height: 100px;
+}
+
+#qtyDiv {
+	padding-top: 10px;
+	padding-left: 10px;
+	width: 210px;
+}
+
+#qtyDiv table, td {
+	border: 1px solid grey;
+}
+
+#qtyDiv td {
+	padding-left: 5px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+#qtyTable {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#qtyTable td:nth-child(1){
+	width: 80px;
+}
+
+#searchDiv {
+	width: 210px;
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	vertical-align: center;
+}
+
+#searchInput {
+	border: 1px solid grey;
+	font-size: 15px;
+	border-radius: 5px;
+	width: 160px;
+	height: 25px;
+}
+
+#searchButton {
+	border: 1px solid grey;
+	border-radius: 5px;
+	font-size: 15px;
+	height: 30px;
+}
+
+#topButtons {
+	position: absolute;
+	top: 285px;
+	left: 1280px;
+	width: 230px;
+	line-height: 35px;
+}
+
+#topButtons button {
+	font-size: 15px;
+	border-radius: 10px;
+	height: 30px;
+	border: none;
+}
+
+#topBtn1 {
+	width: 100%;
+	background: #FF8B2D;
+	color: white;
+}
+
+#topBtn2 {
+	width: 49%;
+}
+
+#topBtn3 {
+	width: 49%;
+}
+
+#mainLeft {
+	position: absolute;
+	top: 120px;
+	left: 75px;
+	width: 250px;
+	height: 600px;
+}
+
+.hide {
+	display: none;
+}
+
+#mImgDiv {
+	padding-top: 20px;
+}
+
+#mImgDivEdit {
+	padding-top: 20px;
+	height: 185px;
+}
+
+#mImg {
+	width: 250px;
+	height: 180px;
+	object-fit: cover;
+}
+
+#mPro {
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 10px;
+	height: 180px;
+	color: grey;
+}
+
+#mProEdit {
+	padding-right: 5px;
+	height: 190px;
+}
+
+#mProTextarea {
+	width: 240px;
+	height: 175px;
+	font-size: 12pt;
+	font-family: 'Noto Sans KR', sans-serif;
+	border: 1px solid #DDDDDD;
+	border-radius: 3px;
+	padding-top: 10px;
+	resize: none;
+}
+
+#mEdit {
+	height: 30px;
+}
+
+#mEditBtn1 {
+	width: 100%;
+	height: 30px;
+	border: 1px solid grey;
+	border-radius: 5px;
+	background: white;
+	color: grey;
+	font-size: 15px;
+	font-weight: 700;
+}
+
+#mEditBtn2 {
+	width: 85%;
+	height: 30px;
+	border: 1px solid grey;
+	border-radius: 5px;
+	background: white;
+	color: grey;
+	font-size: 15px;
+	font-weight: 700;
+}
+
+#mEditBtn3 {
+	height: 30px;
+	border: none;
+	background: transparent;
+	color: grey;
+	font-size: 15px;
+	font-weight: 700;
+}
+
+#mName {
+	padding-top: 20px;
+	font-weight: 700;
+	color: #1897B1;
+}
+
+#memid {
+	color: #FF8B2D;
+	font-style: italic;
+}
+
+#m1chon {
+	padding-top: 10px;
+}
+
+#m1chonSel {
+	width: 100%;
+	font-size: 15px;
+}
+
+#m1B1 {
+	border: none;
+	border-radius: 10px;
+	padding: 10px;
+	width: 120px;
+	color: white;
+	background: #FF8B2D;
+	font-weight: 700;
+}
+
+#m1B2 {
+	border: 1px solid grey;
+	border-radius: 10px;
+	padding: 10px;
+	width: 120px;
+	background: white;
+	font-weight: 700;
+}
+
+#m1B3 {
+	border: none;
+	border-radius: 10px;
+	padding: 10px;
+	width: 100%;
+	color: white;
+	background: #FF8B2D;
+	font-weight: 700;
+}
+
+#mainRight {
+	position: absolute;
+	top: 120px;
+	right: 100px;
+	width: 730px;
+	height: 600px;
+	overflow: auto;
+}
+
+#miniroomDiv {
+	padding-left: 10px;
+	width: 710px;
+}
+
+#cmntDiv {
+	padding-top : 10px;
+	padding-left: 10px;
+	width: 710px;
+}
+
+#cmntTitle {
+	color: #1897B1;
+	font-weight: 700;
+	border-bottom: 1px solid #babec0;
+}
+
+#cmntEmpty {
+	color : #babec0;
+	text-align: center;
+}
+
+#cmntInputDiv {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background: #dee4e8;
+}
+
+#cmntInput {
+	width: 580px;
+	border: none;
+	font-size: 12pt;
+	padding: 2px 5px;
+}
+
+.red::placeholder {
+	color: #ff0000;
+}
+
+#cmntInputDiv button {
+	width: 50px;
+	border: 1px solid #babec0;
+	border-radius: 5px;
+	background: white;
+	color: grey;
+	font-size: 12pt;
+	font-weight: 700;
+	padding: 2px;
+}
+
+#cmntList {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	line-height: 25px;
+}
+
+#cmntNotE a {
+	color:#1897B1; 
+	font-weight: 700;
+}
+
+#cmntNotE a:hover {
+	text-decoration: underline;
+}
+
+.cmntBtnDel {
+	border: none;
+	background: transparent;
+	color: red;
+	font-size: 12pt;
+}

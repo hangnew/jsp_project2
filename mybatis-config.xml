@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+   <typeAliases>
+      <typeAlias type="com.project02.world42.DTO.MainDTO" alias="mainDTO"></typeAlias>
+      <typeAlias type="com.project02.world42.DTO.CmntDTO" alias="cmntDTO"></typeAlias>
+      <typeAlias type="com.project02.world42.DTO.MiniroomDTO" alias="miniDTO"></typeAlias>
+   </typeAliases>
+   <mappers>
+      <mapper resource="mapper/mainMapper.xml" />
+      <mapper resource="mapper/cmntMapper.xml" />
+      <mapper resource="mapper/miniroomMapper.xml" />
+   </mappers>
+</configuration>

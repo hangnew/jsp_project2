@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cmnt">
+	<update id="insert" parameterType="cmntDTO">
+		MERGE INTO cmnt
+			USING DUAL ON(midx=#{mIdx} AND memid=#{memid})
+			WHEN MATCHED THEN
+				UPDATE SET ccon = #{cCon}, cdate = TO_CHAR(CURRENT_DATE,'YYYY/MM/DD HH24:MI')
+			WHEN NOT MATCHED THEN
+				INSERT VALUES(
+					CMNT_SEQ.NEXTVAL, #{mIdx}, #{memid}, #{cCon}, TO_CHAR(CURRENT_DATE,'YYYY/MM/DD HH24:MI')
+				)
+	</update>
+	<select id="read" parameterType="cmntDTO" resultType="cmntDTO">
+		SELECT c.*, u.mname FROM cmnt c JOIN users u ON c.memid = u.memid 
+		WHERE midx = #{mIdx} ORDER BY c.cdate DESC
+	</select>
+	<delete id="delete" parameterType="cmntDTO">
+		delete from CMNT where CIDX = #{cIdx}
+	</delete>
+</mapper>

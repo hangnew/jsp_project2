@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="main">
+	<select id="readAll" parameterType="mainDTO" resultType="mainDTO">
+		SELECT m.*, u.mname, u.m1chon, u.macorn FROM main m JOIN users u 
+		ON m.memid = u.memid WHERE m.memid = #{memid}
+	</select>
+	
+	<select id="read1chon" parameterType="mainDTO" resultMap="m1chonMap">
+		SELECT memid, mname FROM users WHERE memid IN (
+			SELECT REGEXP_SUBSTR(m1chon, '[^,]+', 1, LEVEL) AS memid
+			FROM (
+				SELECT m1chon FROM users WHERE memid = #{memid}
+			)
+			CONNECT BY LEVEL <![CDATA[ < ]]>= LENGTH(REGEXP_REPLACE(m1chon, '[^,]+', '')) + 1
+		)
+	</select>
+	<resultMap type="java.util.HashMap" id="m1chonMap">
+		<result column="memid" property="memid" />
+		<result column="mname" property="mname" />
+	</resultMap>
+	
+	<update id="visitUp" parameterType="mainDTO">
+		UPDATE main SET mtoday = mtoday + 1, mtotal = mtotal + 1 WHERE memid = #{memid}
+	</update>
+	
+	<select id="readTitle" parameterType="mainDTO" resultType="mainDTO">
+		SELECT mtitle FROM main WHERE midx = #{mIdx}
+	</select>
+	
+	<update id="updateTitle" parameterType="mainDTO">
+		UPDATE main SET mtitle = #{mTitle} WHERE midx = #{mIdx}
+	</update>
+	
+	<select id="readProfile" parameterType="mainDTO" resultType="mainDTO">
+		SELECT mimg, mpro FROM main WHERE midx = #{mIdx}
+	</select>
+	
+	<update id="updateProfile" parameterType="mainDTO">
+		UPDATE main SET mimg = #{mImg}, mpro = #{mPro} WHERE midx = #{mIdx}
+	</update>
+	
+</mapper>
